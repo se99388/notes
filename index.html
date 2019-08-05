@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS: -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
+    <!-- jQuery: -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JavaScript: -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <!-- glyphicon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/index.js"></script>
+
+</head>
+
+<body onload="restoreData()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 class="header">My Task Board</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="formNotebook">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">
+                            <span>*</span>My task is:</label>
+                        <span id="errTask"></span>
+                        <input type="text" class="form-control" id="taskBox" placeholder="Example: Buy my vitamins">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">
+                            <span>*</span>Due date:</label>
+                        <span id="errDate"></span>
+                        <input type="date" class="form-control" id="dateBox">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Due time:</label>
+                        <input type="time" class="form-control" id="timeBox">
+                    </div>
+                    
+                    <br>
+                    <button id="add" onclick="return displayOnNote(event)" type="submit" class="btn btn-primary toggleButton">Create a note</button>
+                    <button type="reset" class="btn btn-secondary" value="Reset">Clear</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div id="myNotes"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
